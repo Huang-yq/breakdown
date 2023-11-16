@@ -1,0 +1,9 @@
+Nav: Main
+    Main Page -> TaskList Page -> Focus Page
+                 |_> Modify Page
+
+Nav: Timeline
+    TimeLine Page
+
+Nav: Analytics
+    Analytics Page

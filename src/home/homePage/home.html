@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shrink The Elephant</title>
+    <link rel="stylesheet" href="/home/homePage/home.css">
+    <link rel="stylesheet" href="/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>
+                <img src="/assets/elephant_logo.png" alt="Elephant" width="50" height="50">
+                SHRINK THE ELEPHANT
+            </h1>
+            <ul class="nav-sects">
+                <li><a id="home">HOME</a></li>
+                <li><a id="timeline">TIMELINE</a></li>
+                <li><a id="analytics">ANALYTICS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="elephant-container">
+            <img src="/assets/elephant.png" alt="Elephant">
+        </div>
+
+        <form id="elephantForm">
+            <div id="input">
+                <input type="text" id="elephantInput" placeholder="Type your elephant ...">
+            </div>
+            <div class="granular-group">
+                <div id="question">How detailed do you want your breakdown to be?</div>
+                <div class="granular">
+                    <div>Less granular</div>
+                    <div class="range-container">
+                        <input type="range" id="granularity" min="1" max="5" value="3">
+                        <div class="value" id="rangeValue">3</div>
+                    </div>
+                    <div>More granular</div>
+                </div>
+            </div>
+        </form>
+        <button type="button" id="submit-button" class="button-style">Break it down!</button>
+    </main>
+
+    <script src="/home/homePage/home.js"></script>
+    <script src="/main.js"></script>
+
+</body>
+</html>

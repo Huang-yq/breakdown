@@ -1,0 +1,95 @@
+
+main {
+    margin-top: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+main div img {
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+
+.focus-container {
+    text-align: center;
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.step-section {
+    padding: 20px;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.step {
+    transition: all 0.5s ease;
+    flex-grow: 1;
+    margin-right: 50px;
+}
+
+.central-section .step {
+    font-size: 1.5em;
+    color: #000;
+}
+
+.first-section .step,
+.third-section .step {
+    font-size: 1em;
+    color: #bbb;
+    visibility: visible;
+}
+
+.step.done {
+    position: relative;
+    color: #bbb; 
+}
+
+.step.done::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 2px; 
+    background-color: red; 
+    animation: crossOut 1s forwards; /* Animation lasting 1 second */
+}
+
+@keyframes crossOut {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 70px; 
+}
+
+.icon {
+    font-size: 24px;
+    margin: 0 5px;
+}
+
+.check {
+    height: 24px;
+    width: 24px;
+    margin: 10px 0;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+}

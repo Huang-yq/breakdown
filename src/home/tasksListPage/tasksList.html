@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task List</title>
+    <link rel="stylesheet" href="/home/tasksListPage/tasksList.css">
+    <link rel="stylesheet" href="/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>
+                <img src="/assets/elephant_logo.png" alt="Elephant" width="50" height="50">
+                SHRINK THE ELEPHANT
+            </h1>
+            <ul class="nav-sects">
+                <li><a id="home">HOME</a></li>
+                <li><a id="timeline">TIMELINE</a></li>
+                <li><a id="analytics">ANALYTICS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>
+            <img src="/assets/elephant_logo.png" alt="Elephant" width="50" height="50">
+            Shrink Your Elephant
+        </h1>
+
+        <div class="tasklist-container">
+
+            <div class="main-task">
+                <p>Main task: I want to use ChatGpt to create my own website.</p>
+                <div class="edit-icons">
+                    <i class="fa-solid fa-file-export"></i>
+                </div>
+            </div>
+
+            <ul class="tasks">
+                <li draggable="true">
+                    <span class="drag-handle">&#x2630;</span>
+                    Design the website
+                    <ul>
+                        <li>Choose a suitable template or design layout</li>
+                        <li>Create a color scheme and select appropriate fonts</li>
+                        <li> Design the logo and other visual elements</li>
+                    </ul>
+                    <span class="speech-bubble">Drag to move</span>
+                </li>
+                <li draggable="true">
+                    <span class="drag-handle">&#x2630;</span>
+                    Develop the website structure
+                    <ul>
+                        <li>Create a home page with a clear navigation menu</li>
+                        <li>Design individual web pages for different sections or features of the website</li>
+                        <li>Implement appropriate buttons, links, and forms for user interaction</li>
+                    </ul>
+                    <span class="speech-bubble">Drag to move</span>
+                </li>
+                <li draggable="true">
+                    <span class="drag-handle">&#x2630;</span>
+                    Integrate ChatGpt into the website
+                    <ul>
+                        <li>Select an API or library to integrate ChatGpt with the website</li>
+                        <li>Configure the ChatGpt to handle user queries and generate responses</li>
+                        <li>Implement a user interface for the chatbot to appear on the website</li>
+                    </ul>
+                    <span class="speech-bubble">Drag to move</span>
+                </li>
+                <li draggable="true">
+                    <span class="drag-handle">&#x2630;</span>
+                    Test and debug the website
+                    <ul>
+                        <li>Conduct thorough testing to ensure all website functionalities work correctly</li>
+                        <li>Identify and fix any bugs or issues in the website's code or design</li>
+                        <li>Test the ChatGpt integration for smooth conversation flow and accuracy</li>
+                    </ul>
+                    <span class="speech-bubble">Drag to move</span>
+                </li>
+                <li draggable="true">
+                    <span class="drag-handle">&#x2630;</span>
+                    Deploy and maintain the website
+                    <ul>
+                        <li>Choose a suitable web hosting provider to deploy the website</li>
+                        <li>Regularly update and maintain the website to ensure compatibility and security.</li>
+                        <li>Regularly update and maintain the website to ensure compatibility and security.</li>
+                    </ul>
+                    <span class="speech-bubble">Drag to move</span>
+                </li>
+                <!-- Repeat the list item for each task -->
+                <!-- later implementation -->
+            </ul>
+
+            <div class="action-buttons">
+                <button id="return">Return</button>
+                <button id="confirm">Confirm</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="/home/tasksListPage/tasksList.js"></script>
+    <script src="/main.js"></script>
+
+</body>
+</html>

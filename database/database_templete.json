@@ -1,0 +1,41 @@
+[
+  {
+    "createdDate": "2023-01-01",
+    "tasks": [
+      {
+        "id": 1,
+        "description": "Description of Main Task 1",
+        "isCompleted": false,
+        "subTasks": [
+          {
+            "id": 1,
+            "description": "Description of Subtask 1.1"
+          },
+          {
+            "id": 2,
+            "description": "Description of Subtask 1.2"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "description": "Description of Main Task 2",
+        "isCompleted": false,
+        "subTasks": [
+          {
+            "id": 1,
+            "description": "Description of Subtask 2.1"
+          }
+        ]
+      }
+      // More tasks...
+    ]
+  },
+  {
+    "createdDate": "2023-01-02",
+    "tasks": [
+      // More tasks...
+    ]
+  }
+  // More tasks and dates...
+]

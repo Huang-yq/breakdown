@@ -1,0 +1,183 @@
+[
+  {
+    "createdDate": "2023-11-15",
+    "tasks": [
+      {
+        "id": 1,
+        "description": "Task: Review and Verify Assignment Completion",
+        "isCompleted": false,
+        "subTasks": [
+          {
+            "id": 1,
+            "description": "Task 1.1: Check if all 25 students have submitted their Python assignments"
+          },
+          {
+            "id": 2,
+            "description": "Task 1.2: Verify that each assignment is in .ipynb file format"
+          },
+          {
+            "id": 3,
+            "description": "Task 1.3: Ensure that all assignments are named appropriately"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "description": "Task: Evaluate and Grade the Assignments",
+        "isCompleted": false,
+        "subTasks": [
+          {
+            "id": 1,
+            "description": "Task 2.1: Review the code logic and correctness of each assignment"
+          },
+          {
+            "id": 2,
+            "description": "Task 2.2: Check for adherence to recommended coding conventions and best practices"
+          },
+          {
+            "id": 3,
+            "description": "Task 2.3: Assign grades based on the quality and completeness of the assignments"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "description": "Task: Provide Feedback and Suggestions for Improvement",
+        "isCompleted": false,
+        "subTasks": [
+          {
+            "id": 1,
+            "description": "Task 3.1: Identify strengths and weaknesses in each student's assignment"
+          },
+          {
+            "id": 2,
+            "description": "Task 3.2: Provide constructive feedback on areas that need improvement"
+          },
+          {
+            "id": 3,
+            "description": "Task 3.3: Suggest ways to enhance coding skills and overcome common errors"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "description": "Task: Record and Communicate Grades to Students",
+        "isCompleted": false,
+        "subTasks": [
+          {
+            "id": 1,
+            "description": "Task 4.1: Compile a list of individual grades for each student's assignment"
+          },
+          {
+            "id": 2,
+            "description": "Task 4.2: Prepare personalized grade reports for each student"
+          },
+          {
+            "id": 3,
+            "description": "Task 4.3: Communicate the grades and feedback to the respective students "
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "createdDate": "2023-11-15",
+    "tasks": [
+      {
+        "id": 1,
+        "description": "Design and layout of the website",
+        "isCompleted": false,
+        "subTasks": [
+          {
+            "id": 1,
+            "description": "Choose a suitable template or design for the website"
+          },
+          {
+            "id": 2,
+            "description": "Create a visually appealing layout for the website"
+          },
+          {
+            "id": 3,
+            "description": "Incorporate branding elements and color scheme"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "description": "Backend development for user interaction",
+        "isCompleted": false,
+        "subTasks": [
+          {
+            "id": 1,
+            "description": "Set up user registration and login system"
+          },
+          {
+            "id": 2,
+            "description": "Implement functionality for users to submit queries or input text"
+          },
+          {
+            "id": 3,
+            "description": "Connect the user inputs to the ChatGpt API for generating responses"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "description": "Integration of ChatGpt API",
+        "isCompleted": false,
+        "subTasks": [
+          {
+            "id": 1,
+            "description": "Research and select a suitable API for integrating ChatGpt into the website"
+          },
+          {
+            "id": 2,
+            "description": "Implement the API integration on the backend of the website"
+          },
+          {
+            "id": 3,
+            "description": "Handle API requests and responses efficiently"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "description": "User interface for ChatGpt interaction",
+        "isCompleted": false,
+        "subTasks": [
+          {
+            "id": 1,
+            "description": "Design a user-friendly interface to display user queries and responses from ChatGpt"
+          },
+          {
+            "id": 2,
+            "description": "Implement a chat-like interface for smooth conversation flow"
+          },
+          {
+            "id": 3,
+            "description": "Include options for users to rate or provide feedback on the responses"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "description": "Testing and deployment",
+        "isCompleted": false,
+        "subTasks": [
+          {
+            "id": 1,
+            "description": "Test the website thoroughly to identify and fix any bugs or issues"
+          },
+          {
+            "id": 2,
+            "description": "Optimize the performance and responsiveness of the website"
+          },
+          {
+            "id": 3,
+            "description": "Deploy the website on a reliable hosting platform for public access and usage"
+          }
+        ]
+      }
+    ]
+  }
+]
