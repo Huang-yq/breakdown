@@ -1,22 +1,70 @@
 /* Main */
+body {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
 .tasklist-container {
     width: 60%;
     margin: auto;
-    border: 1px solid #000;
+    border: 3px solid #122c91;
+    border-radius: 5px;
     padding: 20px;
+    margin-bottom: 30px;
+}
+
+main h1 {
+    color: #122c91;
+    padding-top: 20px;
+    margin-left: 40px;
+    padding-bottom: 10px;
 }
 
 .main-task {
-    border-bottom: 1px solid #000;
+    border-bottom: 1.5px solid #122c91;
     padding-bottom: 10px;
     margin-bottom: 20px;
     position: relative;
+    color: #122c91;
+}
+
+.export {
+    position: absolute;
+    right: 0;
+    top: 50%; 
+    transform: translateY(-50%);
 }
 
 .edit-icons {
     position: absolute;
     right: 10px;
-    top: 0;
+}
+
+.modify {
+    font-style: italic;
+    list-style: none;
+    color: #7da3e0;
+    margin-left: 0;
+    cursor: pointer;
+    /* background-color: #7da3e0; */
+    margin-bottom: 4px;
+    text-align: center;
+    border-radius: 5px;
+    border: none;
+    /* gap: 2px; */
+}
+
+.options-container {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    margin-left: 10px;
+    gap: 10px;
+}
+
+.subtask-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .edit-pencil, .edit-confirm {
@@ -30,10 +78,11 @@
 
 .tasks {
     list-style: none;
+    color:#122c91
 }
 
 .tasks li {
-    border-bottom: 1px dashed #000;
+    border-bottom: 1.25px dashed #122c91;
     padding: 10px;
     position: relative;
 }
@@ -42,14 +91,21 @@
     cursor: move;
 }
 
+.dropdown-menu {
+    margin-left: 0;
+}
+
 .speech-bubble {
     display: none;
     position: absolute;
     left: 30px;
     top: -20px;
     padding: 5px;
-    border: 1px solid #000;
-    background-color: #fff;
+    border: 2px solid #122c91;
+    border-radius: 2px;
+    background-color: #7da3e0;
+    color: #e1e1e1;
+    font-style: italic;
 }
 
 .tasks li:hover .speech-bubble {
@@ -65,4 +121,38 @@
 button {
     padding: 10px 20px;
     cursor: pointer;
+    background-color: #7da3e0;
+    border: 1.5px solid #122c91;
+    border-radius: 5px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: small;
+    color: #e1e1e1;
+}
+
+button:hover {
+    background-color: #122c91;
+    color: #e1e1e1;
+    font-size: 14px;
+}
+
+.options-container .fa-ellipsis {
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.options-container .fa-ellipsis:hover {
+    background-color: #7da3e0;
+    padding: 2px;
+    border-radius: 3px;
+}
+
+.options-container .fa-rotate-right {
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.options-container .fa-rotate-right:hover {
+    background-color: #7da3e0;
+    padding: 2px;
+    border-radius: 3px;
 }

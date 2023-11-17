@@ -1,10 +1,19 @@
 const steps = [
-    { text: 'Step 1: This is step 1 test test', done: false },
-    { text: 'Step 2: now step 2', done: false },
-    { text: 'Step 3: step 3 test again', done: false },
-    { text: 'Step 4: step 4 is not the last step', done: false },
-    { text: 'Step 5: step 5 is the last step', done: false },
-    // need to connect the steps with before
+    { text: 'Choose a suitable template or design layout', done: false },
+    { text: 'Create a color scheme and select appropriate fonts', done: false },
+    { text: 'Design the logo and other visual elements', done: false },
+    { text: 'Create a home page with a clear navigation menu', done: false },
+    { text: 'Design individual web pages for different sections or features of the website', done: false },
+    { text: 'Implement appropriate buttons, links, and forms for user interaction', done: false },
+    { text: 'Select an API or library to integrate ChatGpt with the website', done: false },
+    { text: 'Configure the ChatGpt to handle user queries and generate responses', done: false },
+    { text: 'Implement a user interface for the chatbot to appear on the website', done: false },
+    { text: 'Conduct thorough testing to ensure all website functionalities work correctly', done: false },
+    { text: "Identify and fix any bugs or issues in the website's code or design", done: false },
+    { text: 'Test the ChatGpt integration for smooth conversation flow and accuracy', done: false },
+    { text: 'Choose a suitable web hosting provider to deploy the website', done: false },
+    { text: 'Configure the website to be accessible online', done: false },
+    { text: 'Regularly update and maintain the website to ensure compatibility and security', done: false },
 ];
 
 let currentStepIndex = 0;
@@ -26,6 +35,15 @@ function updateSteps() {
     thirdSectionStep.classList.toggle('done', currentStepIndex < steps.length - 1 && steps[currentStepIndex + 1].done);
 }
 
+function moveToNextStepAfterDelay() {
+    setTimeout(() => {
+        if (currentStepIndex < steps.length - 1) {
+            currentStepIndex++;
+            updateSteps();
+        }
+    }, 800); 
+}
+
 function setupEventListeners() {
     const upIcon = document.querySelector('.first-section .move-up');
     const downIcon = document.querySelector('.third-section .move-down');
@@ -45,9 +63,20 @@ function setupEventListeners() {
         }
     });
 
-    checkbox.addEventListener('change', () => {
-        steps[currentStepIndex].done = checkbox.checked;
-        updateSteps();
+    checkbox.addEventListener('change', (e) => {
+        if (!e.target.checked && currentStepIndex < steps.length - 1 && steps[currentStepIndex + 1].done) {
+            alert("Please uncheck the later step first.");
+            e.target.checked = true; 
+        } else if (currentStepIndex > 0 && !steps[currentStepIndex - 1].done) {
+            alert("Please complete the previous step first.");
+            e.target.checked = false; 
+        } else {
+            steps[currentStepIndex].done = e.target.checked;
+            updateSteps();
+            if (e.target.checked) {
+                moveToNextStepAfterDelay();
+            }
+        }
     });
 }
 
@@ -56,3 +85,10 @@ document.addEventListener('DOMContentLoaded', () => {
     setupEventListeners();
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    var returnButton = document.getElementById('return');
+
+    returnButton.onclick = function() {
+        window.location.href = '/home/tasksListPage/tasksList.html';
+    };
+});

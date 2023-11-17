@@ -1,0 +1,19 @@
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 20px); /* 7 days a week */
+    grid-gap: 2px;
+    border: 1px solid #ccc; /* light border around the calendar */
+  }
+
+  .day {
+    width: 20px;
+    height: 20px;
+    background-color: #fff; /* white for no activity */
+  }
+
+  /* Shades of green for different levels of activity */
+  .active-1 { background-color: #e0f2e9; } /* lightest green */
+  .active-2 { background-color: #c6e48b; }
+  .active-3 { background-color: #7bc96f; }
+  .active-4 { background-color: #239a3b; }
+  .active-5 { background-color: #196127; } /* darkest green */

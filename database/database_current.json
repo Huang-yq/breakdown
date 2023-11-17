@@ -1,180 +1,99 @@
 [
   {
-    "createdDate": "2023-11-15",
+    "createdDate": "2023-11-16",
     "tasks": [
       {
         "id": 1,
-        "description": "Task: Review and Verify Assignment Completion",
+        "description": "Design the website",
         "isCompleted": false,
         "subTasks": [
           {
             "id": 1,
-            "description": "Task 1.1: Check if all 25 students have submitted their Python assignments"
+            "description": "Choose a suitable template or design layout"
           },
           {
             "id": 2,
-            "description": "Task 1.2: Verify that each assignment is in .ipynb file format"
+            "description": "Create a color scheme and select appropriate fonts"
           },
           {
             "id": 3,
-            "description": "Task 1.3: Ensure that all assignments are named appropriately"
+            "description": "Design the logo and other visual elements"
           }
         ]
       },
       {
         "id": 2,
-        "description": "Task: Evaluate and Grade the Assignments",
+        "description": "Develop the website structure",
         "isCompleted": false,
         "subTasks": [
           {
             "id": 1,
-            "description": "Task 2.1: Review the code logic and correctness of each assignment"
+            "description": "Create a home page with a clear navigation menu"
           },
           {
             "id": 2,
-            "description": "Task 2.2: Check for adherence to recommended coding conventions and best practices"
+            "description": "Design individual web pages for different sections or features of the website"
           },
           {
             "id": 3,
-            "description": "Task 2.3: Assign grades based on the quality and completeness of the assignments"
+            "description": "Implement appropriate buttons, links, and forms for user interaction"
           }
         ]
       },
       {
         "id": 3,
-        "description": "Task: Provide Feedback and Suggestions for Improvement",
+        "description": "Integrate ChatGpt into the website",
         "isCompleted": false,
         "subTasks": [
           {
             "id": 1,
-            "description": "Task 3.1: Identify strengths and weaknesses in each student's assignment"
+            "description": "Select an API or library to integrate ChatGpt with the website"
           },
           {
             "id": 2,
-            "description": "Task 3.2: Provide constructive feedback on areas that need improvement"
+            "description": "Configure the ChatGpt to handle user queries and generate responses"
           },
           {
             "id": 3,
-            "description": "Task 3.3: Suggest ways to enhance coding skills and overcome common errors"
+            "description": "Implement a user interface for the chatbot to appear on the website"
           }
         ]
       },
       {
         "id": 4,
-        "description": "Task: Record and Communicate Grades to Students",
+        "description": "Test and debug the website",
         "isCompleted": false,
         "subTasks": [
           {
             "id": 1,
-            "description": "Task 4.1: Compile a list of individual grades for each student's assignment"
+            "description": "Conduct thorough testing to ensure all website functionalities work correctly"
           },
           {
             "id": 2,
-            "description": "Task 4.2: Prepare personalized grade reports for each student"
+            "description": "Identify and fix any bugs or issues in the website's code or design"
           },
           {
             "id": 3,
-            "description": "Task 4.3: Communicate the grades and feedback to the respective students "
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "createdDate": "2023-11-15",
-    "tasks": [
-      {
-        "id": 1,
-        "description": "Design and layout of the website",
-        "isCompleted": false,
-        "subTasks": [
-          {
-            "id": 1,
-            "description": "Choose a suitable template or design for the website"
-          },
-          {
-            "id": 2,
-            "description": "Create a visually appealing layout for the website"
-          },
-          {
-            "id": 3,
-            "description": "Incorporate branding elements and color scheme"
-          }
-        ]
-      },
-      {
-        "id": 2,
-        "description": "Backend development for user interaction",
-        "isCompleted": false,
-        "subTasks": [
-          {
-            "id": 1,
-            "description": "Set up user registration and login system"
-          },
-          {
-            "id": 2,
-            "description": "Implement functionality for users to submit queries or input text"
-          },
-          {
-            "id": 3,
-            "description": "Connect the user inputs to the ChatGpt API for generating responses"
-          }
-        ]
-      },
-      {
-        "id": 3,
-        "description": "Integration of ChatGpt API",
-        "isCompleted": false,
-        "subTasks": [
-          {
-            "id": 1,
-            "description": "Research and select a suitable API for integrating ChatGpt into the website"
-          },
-          {
-            "id": 2,
-            "description": "Implement the API integration on the backend of the website"
-          },
-          {
-            "id": 3,
-            "description": "Handle API requests and responses efficiently"
-          }
-        ]
-      },
-      {
-        "id": 4,
-        "description": "User interface for ChatGpt interaction",
-        "isCompleted": false,
-        "subTasks": [
-          {
-            "id": 1,
-            "description": "Design a user-friendly interface to display user queries and responses from ChatGpt"
-          },
-          {
-            "id": 2,
-            "description": "Implement a chat-like interface for smooth conversation flow"
-          },
-          {
-            "id": 3,
-            "description": "Include options for users to rate or provide feedback on the responses"
+            "description": "Test the ChatGpt integration for smooth conversation flow and accuracy"
           }
         ]
       },
       {
         "id": 5,
-        "description": "Testing and deployment",
+        "description": "Deploy and maintain the website",
         "isCompleted": false,
         "subTasks": [
           {
             "id": 1,
-            "description": "Test the website thoroughly to identify and fix any bugs or issues"
+            "description": "Choose a suitable web hosting provider to deploy the website"
           },
           {
             "id": 2,
-            "description": "Optimize the performance and responsiveness of the website"
+            "description": "Configure the website to be accessible online"
           },
           {
             "id": 3,
-            "description": "Deploy the website on a reliable hosting platform for public access and usage"
+            "description": "Regularly update and maintain the website to ensure compatibility and security."
           }
         ]
       }

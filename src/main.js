@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', function() {
     var navTimeline = document.getElementById('timeline');
     navTimeline.onclick = function() {
-        window.location.href = '/timeline/timelinePage/timeline.html';
+        window.location.href = '/home/timeLinePage/timeLine.html';
     };
 });
 

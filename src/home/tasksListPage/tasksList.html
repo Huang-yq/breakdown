@@ -27,78 +27,151 @@
     </header>
 
     <main>
-        <h1>
-            <img src="/assets/elephant_logo.png" alt="Elephant" width="50" height="50">
-            Shrink Your Elephant
+        <h1 id="title">
+            
         </h1>
 
         <div class="tasklist-container">
 
             <div class="main-task">
-                <p>Main task: I want to use ChatGpt to create my own website.</p>
-                <div class="edit-icons">
+                <p>Main task: I want to use ChatGPT to create my own website.</p>
+                <div class="export">
                     <i class="fa-solid fa-file-export"></i>
                 </div>
             </div>
 
             <ul class="tasks">
                 <li draggable="true">
-                    <span class="drag-handle">&#x2630;</span>
-                    Design the website
-                    <ul>
+                    <div class="subtask">
+                        <span class="drag-handle">&#x2630;</span>
+                        <div class="subtask-content">
+                            <p class="subtask-description">Design the website</p>
+                            <div class="options-container">
+                                
+                                    <i class="fa-solid fa-rotate-right"></i>
+                                    <i class="fa-solid fa-ellipsis"></i>
+                               
+                                <div class="dropdown-menu" style="display: none;">
+                                    <ul>
+                                        <li class="modify">EDIT</li>
+                                        <li class="modify">DELETE</li>
+                                        <li class="modify">ADD</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <ul id="sub-subtask-list">
                         <li>Choose a suitable template or design layout</li>
                         <li>Create a color scheme and select appropriate fonts</li>
                         <li> Design the logo and other visual elements</li>
                     </ul>
-                    <span class="speech-bubble">Drag to move</span>
                 </li>
                 <li draggable="true">
-                    <span class="drag-handle">&#x2630;</span>
-                    Develop the website structure
+                    <div class="subtask">
+                        <span class="drag-handle">&#x2630;</span>
+                        <div class="subtask-content">
+                            <p class="subtask-description">Develop the website structure</p>
+                            <div class="options-container">
+                                <i class="fa-solid fa-rotate-right"></i>
+                                <i class="fa-solid fa-ellipsis"></i>
+                                <div class="dropdown-menu" style="display: none;">
+                                    <ul>
+                                        <li class="modify">EDIT</li>
+                                        <li class="modify">DELETE</li>
+                                        <li class="modify">ADD</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <ul>
                         <li>Create a home page with a clear navigation menu</li>
                         <li>Design individual web pages for different sections or features of the website</li>
                         <li>Implement appropriate buttons, links, and forms for user interaction</li>
                     </ul>
-                    <span class="speech-bubble">Drag to move</span>
                 </li>
                 <li draggable="true">
-                    <span class="drag-handle">&#x2630;</span>
-                    Integrate ChatGpt into the website
+                    <div class="subtask">
+                        <span class="drag-handle">&#x2630;</span>
+                        <div class="subtask-content">
+                            <p class="subtask-description">Integrate ChatGpt into the website</p>
+                            <div class="options-container">
+                                <i class="fa-solid fa-rotate-right"></i>
+                                <i class="fa-solid fa-ellipsis"></i>
+                                <div class="dropdown-menu" style="display: none;">
+                                    <ul>
+                                        <li class="modify">EDIT</li>
+                                        <li class="modify">DELETE</li>
+                                        <li class="modify">ADD</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
                     <ul>
                         <li>Select an API or library to integrate ChatGpt with the website</li>
                         <li>Configure the ChatGpt to handle user queries and generate responses</li>
                         <li>Implement a user interface for the chatbot to appear on the website</li>
                     </ul>
-                    <span class="speech-bubble">Drag to move</span>
                 </li>
                 <li draggable="true">
-                    <span class="drag-handle">&#x2630;</span>
-                    Test and debug the website
+                    <div class="subtask">
+                        <span class="drag-handle">&#x2630;</span>
+                        <div class="subtask-content">
+                            <p class="subtask-description">Test and debug the website</p>
+                            <div class="options-container">
+                                <i class="fa-solid fa-rotate-right"></i>
+                                <i class="fa-solid fa-ellipsis"></i>
+                                <div class="dropdown-menu" style="display: none;">
+                                    <ul>
+                                        <li class="modify">EDIT</li>
+                                        <li class="modify">DELETE</li>
+                                        <li class="modify">ADD</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>   
+                    </div>
                     <ul>
                         <li>Conduct thorough testing to ensure all website functionalities work correctly</li>
                         <li>Identify and fix any bugs or issues in the website's code or design</li>
                         <li>Test the ChatGpt integration for smooth conversation flow and accuracy</li>
                     </ul>
-                    <span class="speech-bubble">Drag to move</span>
                 </li>
                 <li draggable="true">
-                    <span class="drag-handle">&#x2630;</span>
-                    Deploy and maintain the website
+                    <div class="subtask">
+                        <span class="drag-handle">&#x2630;</span>
+                        <div class="subtask-content">
+                            <p class="subtask-description">Deploy and maintain the website</p>
+                            <div class="options-container">
+                                <i class="fa-solid fa-rotate-right"></i>
+                                <i class="fa-solid fa-ellipsis"></i>
+                                <div class="dropdown-menu" style="display: none;">
+                                    <ul>
+                                        <li class="modify">EDIT</li>
+                                        <li class="modify">DELETE</li>
+                                        <li class="modify">ADD</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
                     <ul>
                         <li>Choose a suitable web hosting provider to deploy the website</li>
                         <li>Regularly update and maintain the website to ensure compatibility and security.</li>
                         <li>Regularly update and maintain the website to ensure compatibility and security.</li>
                     </ul>
-                    <span class="speech-bubble">Drag to move</span>
                 </li>
                 <!-- Repeat the list item for each task -->
-                <!-- later implementation -->
             </ul>
 
             <div class="action-buttons">
-                <button id="return">Return</button>
-                <button id="confirm">Confirm</button>
+                <button id="return">START OVER</button>
+                <button id="confirm">START FOCUSING</button>
             </div>
         </div>
     </main>

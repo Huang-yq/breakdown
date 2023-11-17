@@ -30,6 +30,7 @@ main .elephant-container {
   height: 250px;
   position: relative;
   margin-bottom: 25px;
+  box-shadow: -1px 2px 2px #4d4d4d54;
 }
 
 #elephantForm {
