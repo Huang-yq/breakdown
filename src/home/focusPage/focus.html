@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Focus Tasks</title>
+    
     <link rel="stylesheet" href="/home/focusPage/focus.css">
     <link rel="stylesheet" href="/main.css">
     <link rel="stylesheet" href="/home/tasksListPage/tasksList.css">
@@ -15,14 +16,15 @@
 <body>
     <header>
         <nav>
-            <h1>
-                <img src="/assets/elephant_logo.png" alt="Elephant" width="50" height="50">
-                SHRINK THE ELEPHANT
-            </h1>
+            <div class="heading">
+                <div class="title">
+                    <img src="/assets/elephant_logo.png" alt="Elephant" width="50" height="50">
+                    <h1>SHRINK THE ELEPHANT</h1>
+                </div>
+                <p>- shrink your task to a manageable size effortlessly</p>
+            </div>
             <ul class="nav-sects">
-                <li><a id="home">HOME</a></li>
-                <li><a id="timeline">TIMELINE</a></li>
-                <li><a id="analytics">ANALYTICS</a></li>
+                <li><a id="home-click">HOME</a></li>
             </ul>
         </nav>
     </header>
@@ -32,7 +34,9 @@
             <img src="/assets/elephant.png" alt="Elephant">
         </div>
         <div class="main-task">
-            <p>Main task: I want to use ChatGPT to create my own website.</p>
+            <p id="mainElephant" class="hidden">Main task: </p>
+            <span class="toggle"><i class="far fa-eye"></i></span>
+            <span id="toggleTxt" class="toggle-txt">HIDE MAIN TASK</span>
         </div>
 
         <div class="focus-container">
@@ -62,6 +66,7 @@
 
     <script src="/home/focusPage/focus.js"></script>
     <script src="/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
 
 </body>
 </html>

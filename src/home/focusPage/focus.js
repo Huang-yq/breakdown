@@ -1,44 +1,53 @@
-const steps = [
-    { text: 'Choose a suitable template or design layout', done: false },
-    { text: 'Create a color scheme and select appropriate fonts', done: false },
-    { text: 'Design the logo and other visual elements', done: false },
-    { text: 'Create a home page with a clear navigation menu', done: false },
-    { text: 'Design individual web pages for different sections or features of the website', done: false },
-    { text: 'Implement appropriate buttons, links, and forms for user interaction', done: false },
-    { text: 'Select an API or library to integrate ChatGpt with the website', done: false },
-    { text: 'Configure the ChatGpt to handle user queries and generate responses', done: false },
-    { text: 'Implement a user interface for the chatbot to appear on the website', done: false },
-    { text: 'Conduct thorough testing to ensure all website functionalities work correctly', done: false },
-    { text: "Identify and fix any bugs or issues in the website's code or design", done: false },
-    { text: 'Test the ChatGpt integration for smooth conversation flow and accuracy', done: false },
-    { text: 'Choose a suitable web hosting provider to deploy the website', done: false },
-    { text: 'Configure the website to be accessible online', done: false },
-    { text: 'Regularly update and maintain the website to ensure compatibility and security', done: false },
-];
+let mainElephant = '';
+let currentSubTaskIndex = 0;
+let subTasks = [];
+document.addEventListener('DOMContentLoaded', function() {
+    fetch('/database/database_current.json')
+        .then(response => response.json())
+        .then(data => {
+            mainElephant = data[0].elephant;
+            data[0].tasks.forEach(task => {
+                subTasks.push(...task.subTasks.map(subTask => ({ 
+                    text: subTask.description, 
+                    done: false 
+                })));
+            });
+            updateSteps();
+            setupEventListeners();
+        })
+        .catch(error => console.error('Error:', error));
+});
 
-let currentStepIndex = 0;
 
-function updateSteps() {
+function updateSteps(elephant = mainElephant, tasksData = subTasks) {
     const firstSectionStep = document.querySelector('.first-section .step');
     const centralSectionStep = document.querySelector('.central-section .step');
     const thirdSectionStep = document.querySelector('.third-section .step');
     const checkbox = document.querySelector('.central-section .check');
+    const mainTask = document.getElementById('mainElephant');
+    const upIcon = document.querySelector('.first-section .move-up');
+    const downIcon = document.querySelector('.third-section .move-down');
 
-    firstSectionStep.textContent = currentStepIndex > 0 ? steps[currentStepIndex - 1].text : '';
-    centralSectionStep.textContent = steps[currentStepIndex].text;
-    thirdSectionStep.textContent = currentStepIndex < steps.length - 1 ? steps[currentStepIndex + 1].text : '';
 
-    checkbox.checked = steps[currentStepIndex].done;
+    mainTask.textContent = `Main task: ${elephant}.`;
+    firstSectionStep.textContent = currentSubTaskIndex > 0 ? tasksData[currentSubTaskIndex - 1].text : '';
+    centralSectionStep.textContent = tasksData[currentSubTaskIndex].text;
+    thirdSectionStep.textContent = currentSubTaskIndex < tasksData.length - 1 ? tasksData[currentSubTaskIndex + 1].text : '';
 
-    firstSectionStep.classList.toggle('done', currentStepIndex > 0 && steps[currentStepIndex - 1].done);
-    centralSectionStep.classList.toggle('done', steps[currentStepIndex].done);
-    thirdSectionStep.classList.toggle('done', currentStepIndex < steps.length - 1 && steps[currentStepIndex + 1].done);
+    checkbox.checked = tasksData[currentSubTaskIndex].done;
+
+    firstSectionStep.classList.toggle('done', currentSubTaskIndex > 0 && tasksData[currentSubTaskIndex - 1].done);
+    centralSectionStep.classList.toggle('done', tasksData[currentSubTaskIndex].done);
+    thirdSectionStep.classList.toggle('done', currentSubTaskIndex < tasksData.length - 1 && tasksData[currentSubTaskIndex + 1].done);
+    
+    upIcon.style.display = currentSubTaskIndex > 0 ? 'block' : 'none';
+    downIcon.style.display = currentSubTaskIndex < tasksData.length - 1 ? 'block' : 'none';
 }
 
 function moveToNextStepAfterDelay() {
     setTimeout(() => {
-        if (currentStepIndex < steps.length - 1) {
-            currentStepIndex++;
+        if (currentSubTaskIndex < subTasks.length - 1) {
+            currentSubTaskIndex++;
             updateSteps();
         }
     }, 800); 
@@ -50,45 +59,118 @@ function setupEventListeners() {
     const checkbox = document.querySelector('.central-section .check');
 
     upIcon.addEventListener('click', () => {
-        if (currentStepIndex > 0) {
-            currentStepIndex--;
+        if (currentSubTaskIndex > 0) {
+            currentSubTaskIndex--;
             updateSteps();
         }
     });
 
     downIcon.addEventListener('click', () => {
-        if (currentStepIndex < steps.length - 1) {
-            currentStepIndex++;
+        if (currentSubTaskIndex < subTasks.length - 1) {
+            currentSubTaskIndex++;
             updateSteps();
         }
     });
 
     checkbox.addEventListener('change', (e) => {
-        if (!e.target.checked && currentStepIndex < steps.length - 1 && steps[currentStepIndex + 1].done) {
+        if (!e.target.checked && currentSubTaskIndex < subTasks.length - 1 && subTasks[currentSubTaskIndex + 1].done) {
             alert("Please uncheck the later step first.");
             e.target.checked = true; 
-        } else if (currentStepIndex > 0 && !steps[currentStepIndex - 1].done) {
+        } else if (currentSubTaskIndex > 0 && !subTasks[currentSubTaskIndex- 1].done) {
             alert("Please complete the previous step first.");
             e.target.checked = false; 
         } else {
-            steps[currentStepIndex].done = e.target.checked;
+            subTasks[currentSubTaskIndex].done = e.target.checked;
             updateSteps();
             if (e.target.checked) {
                 moveToNextStepAfterDelay();
             }
         }
+        updateTaskButtonState();
+        if (subTasks.every(task => task.done)) {
+            triggerConfettiAnimation();
+        }
     });
 }
-
-document.addEventListener('DOMContentLoaded', () => {
-    updateSteps();
-    setupEventListeners();
-});
+function triggerConfettiAnimation() {
+    confetti({
+        particleCount: 150,
+        spread: 150,
+        origin: { y: 0.8 },
+        // colors: ['#bb0000', '#ffffff'] 
+    });
+}
 
 document.addEventListener('DOMContentLoaded', function() {
     var returnButton = document.getElementById('return');
 
     returnButton.onclick = function() {
         window.location.href = '/home/tasksListPage/tasksList.html';
+    };
+});
+
+// change the button from edit tasks to shrink another elephant
+function updateTaskButtonState() {
+    var returnButton = document.getElementById('return');
+    if (subTasks.every(task => task.done)) {
+        returnButton.textContent = "SHRINK ANOTHER ELEPHANT";
+        returnButton.onclick = function() {
+            var confirmation = confirm("Are you sure you want to go back to home page? You will start a new task.");
+            if (confirmation) {
+                window.location.href = '/home/homePage/home.html';
+            }
+        };
+    } else {
+        returnButton.textContent = "EDIT TASKS";
+        returnButton.onclick = function() {
+            var confirmation = confirm("Are you sure you want to edit your tasks now? You will lose all your progress.");
+            if (confirmation) {
+                window.location.href = '/home/tasksListPage/tasksList.html';
+            }
+        };
+    }
+}
+
+
+// handle edit task button
+document.addEventListener('DOMContentLoaded', function() {
+    var returnButton = document.getElementById('return');
+
+    returnButton.onclick = function() {
+        var confirmation = confirm("Are you sure you want to edit your tasks now? You will lose all your progress.");
+        if (confirmation) {
+            window.location.href = '/home/tasksListPage/tasksList.html';
+        }
+    };
+});
+
+// hide task
+document.addEventListener('DOMContentLoaded', function () {
+    const mainTask = document.getElementById('mainElephant');
+    const toggleIcon = document.querySelector('.toggle');
+    const toggleTxt = document.getElementById('toggleTxt');
+
+    mainTask.classList.remove('hidden');
+    toggleTxt.textContent = 'HIDE TASK';
+
+    toggleIcon.addEventListener('click', function () {
+        mainTask.classList.toggle('hidden');
+
+        if (mainTask.classList.contains('hidden')) {
+            toggleTxt.textContent = 'VIEW TASK';
+        } else {
+            toggleTxt.textContent = 'HIDE TASK';
+        }
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    var returnHome = document.getElementById('home-click');
+
+    returnHome.onclick = function() {
+        var confirmHome = confirm("Are you sure you want to return home? You will lose all your progress.");
+        if (confirmHome) {
+            window.location.href = '/home/homePage/home.html';
+        }
     };
 });
