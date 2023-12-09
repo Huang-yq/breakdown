@@ -1,101 +1,111 @@
 [
   {
-    "createdDate": "2023-11-16",
+    "createdDate": "2023-12-09",
+    "elephant": "I need to go to New York on 20th, plan a trip for me",
     "tasks": [
       {
         "id": 1,
-        "description": "Design the website",
+        "description": "Book Travel:",
         "isCompleted": false,
         "subTasks": [
           {
             "id": 1,
-            "description": "Choose a suitable template or design layout"
+            "description": "Research and book flight tickets to New York",
+            "isCompleted": false,
+            "completedTime": null
           },
           {
             "id": 2,
-            "description": "Create a color scheme and select appropriate fonts"
+            "description": "Research and book accommodations in New York",
+            "isCompleted": false,
+            "completedTime": null
           },
           {
             "id": 3,
-            "description": "Design the logo and other visual elements"
+            "description": "Research and arrange transportation from the airport to the accommodation in New York",
+            "isCompleted": false,
+            "completedTime": null
           }
-        ]
+        ],
+        "completedTime": null
       },
       {
         "id": 2,
-        "description": "Develop the website structure",
+        "description": "Plan Itinerary:",
         "isCompleted": false,
         "subTasks": [
           {
             "id": 1,
-            "description": "Create a home page with a clear navigation menu"
+            "description": "Research and create a list of attractions and landmarks to visit in New York",
+            "isCompleted": false,
+            "completedTime": null
           },
           {
             "id": 2,
-            "description": "Design individual web pages for different sections or features of the website"
+            "description": "Research and plan the daily activities and schedule for the trip in New York",
+            "isCompleted": false,
+            "completedTime": null
           },
           {
             "id": 3,
-            "description": "Implement appropriate buttons, links, and forms for user interaction"
+            "description": "Research and identify restaurants and cafes for meals and snacks during the trip in New York",
+            "isCompleted": false,
+            "completedTime": null
           }
-        ]
+        ],
+        "completedTime": null
       },
       {
         "id": 3,
-        "description": "Integrate ChatGpt into the website",
+        "description": "Prepare Travel Essentials:",
         "isCompleted": false,
         "subTasks": [
           {
             "id": 1,
-            "description": "Select an API or library to integrate ChatGpt with the website"
+            "description": "Check and ensure that all necessary travel documents (e.g., passport, ID) are valid and up to date",
+            "isCompleted": false,
+            "completedTime": null
           },
           {
             "id": 2,
-            "description": "Configure the ChatGpt to handle user queries and generate responses"
+            "description": "Make a packing list of essential items for the trip to New York (e.g., clothing, toiletries, medications)",
+            "isCompleted": false,
+            "completedTime": null
           },
           {
             "id": 3,
-            "description": "Implement a user interface for the chatbot to appear on the website"
+            "description": "Purchase any required travel gear or accessories needed for the trip to New York (e.g., travel adapters, cameras)",
+            "isCompleted": false,
+            "completedTime": null
           }
-        ]
+        ],
+        "completedTime": null
       },
       {
         "id": 4,
-        "description": "Test and debug the website",
+        "description": "Organize Finances:",
         "isCompleted": false,
         "subTasks": [
           {
             "id": 1,
-            "description": "Conduct thorough testing to ensure all website functionalities work correctly"
+            "description": "Estimate and create a budget for the trip to New York, including expenses such as transportation, accommodation, meals, activities, and souvenirs",
+            "isCompleted": false,
+            "completedTime": null
           },
           {
             "id": 2,
-            "description": "Identify and fix any bugs or issues in the website's code or design"
+            "description": "Research and explore available payment options in New York (e.g., credit cards, currency exchange)",
+            "isCompleted": false,
+            "completedTime": null
           },
           {
             "id": 3,
-            "description": "Test the ChatGpt integration for smooth conversation flow and accuracy"
+            "description": "Notify the bank of the travel dates and destinations to avoid any issues with using cards abroad.",
+            "isCompleted": false,
+            "completedTime": null
           }
-        ]
-      },
-      {
-        "id": 5,
-        "description": "Deploy and maintain the website",
-        "isCompleted": false,
-        "subTasks": [
-          {
-            "id": 1,
-            "description": "Choose a suitable web hosting provider to deploy the website"
-          },
-          {
-            "id": 2,
-            "description": "Configure the website to be accessible online"
-          },
-          {
-            "id": 3,
-            "description": "Regularly update and maintain the website to ensure compatibility and security."
-          }
-        ]
+        ],
+        "completedTime": null
       }
     ]
   }

@@ -10,6 +10,7 @@ body {
     border-radius: 5px;
     padding: 20px;
     margin-bottom: 30px;
+    background-color: #ffffff;
 }
 
 main h1 {
@@ -25,6 +26,11 @@ main h1 {
     margin-bottom: 20px;
     position: relative;
     color: #122c91;
+}
+
+#mainElephant {
+    margin-left: 10px;
+    font-weight: bold;
 }
 
 .export {
@@ -55,7 +61,7 @@ main h1 {
 
 .options-container {
     display: flex;
-    /* justify-content: space-between; */
+    justify-content: space-between;
     align-items: center;
     margin-left: 10px;
     gap: 10px;
@@ -72,8 +78,12 @@ main h1 {
     margin-left: 10px;
 }
 
-.fa-file-export {
+.export-click {
     cursor: pointer;
+}
+
+.export-click:hover {
+    color: #7da3e0;
 }
 
 .tasks {
@@ -85,6 +95,15 @@ main h1 {
     border-bottom: 1.25px dashed #122c91;
     padding: 10px;
     position: relative;
+}
+
+.subtask-edit-input {
+    border: none;
+    outline: none;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: large;
+    width: 100%;
+    padding: 10px;
 }
 
 .drag-handle {
@@ -116,23 +135,47 @@ main h1 {
     display: flex;
     justify-content: space-between;
     padding-top: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
-button {
+.return-button {
+
     padding: 10px 20px;
     cursor: pointer;
-    background-color: #7da3e0;
+    background-color: #e1e1e1;
     border: 1.5px solid #122c91;
+    border-radius: 5px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: small;
+    color: #122c91;
+}
+
+.start-button {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #122c91;
+    border: 1.5px solid #7da3e0;
     border-radius: 5px;
     font-family: 'Josefin Sans', sans-serif;
     font-size: small;
     color: #e1e1e1;
 }
 
-button:hover {
-    background-color: #122c91;
+.start-button:hover {
+
+    background-color: #7da3e0;
+    color: #ffffff;
+    font-weight: 700;
+    border: 1.5px solid #122c91;
+
+    /* font-size: 14px; */
+}
+
+.return-button:hover {
+    background-color: #7da3e0;
     color: #e1e1e1;
-    font-size: 14px;
+    font-weight: 600;
 }
 
 .options-container .fa-ellipsis {

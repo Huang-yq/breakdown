@@ -1,6 +1,6 @@
 /* Main */
 main {
-  margin-top: 20px;
+  margin-top: 100px;
   margin-left: 10%;
   margin-right: 10%;
   display: flex;
@@ -29,7 +29,7 @@ main .elephant-container {
   width: 250px;
   height: 250px;
   position: relative;
-  margin-bottom: 25px;
+  margin-bottom: 100px;
   box-shadow: -1px 2px 2px #4d4d4d54;
 }
 
@@ -45,15 +45,15 @@ main .elephant-container {
   font-size: 16px;
   border: 2px solid #122c91;
   border-radius: 5px;
-  background-color: #7da3e0;
+  background-color: #ffffff;
   font-family: 'Josefin Sans', sans-serif;
-  color:#e1e1e1;
+  color:#122c91;
 }
 
 
 #elephantForm #input ::placeholder {
   font-family: 'Josefin Sans', sans-serif;
-  color: #e1e1e1;
+  color: #7da3e0;
   font-style: italic;
   
 }
@@ -120,7 +120,7 @@ main .elephant-container {
   padding-top: 15px;
   font-size: 18px;
   color: #ffffff;
-  background-color: #7da3e0;
+  background-color: #122c91;
   border: 2px solid #122c91;
   border-radius: 5px;
   cursor: pointer;
@@ -132,5 +132,5 @@ main .elephant-container {
 
 #submit-button.button-style:hover {
   background-color: #122c91;
-  color: #e1e1e1;
+  color: #7da3e0;
 }

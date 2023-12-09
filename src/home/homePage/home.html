@@ -12,17 +12,18 @@
 </head>
 <body>
     <header>
-        <nav>
-            <h1>
-                <img src="/assets/elephant_logo.png" alt="Elephant" width="50" height="50">
-                SHRINK THE ELEPHANT
-            </h1>
-            <ul class="nav-sects">
-                <li><a id="home">HOME</a></li>
-                <li><a id="timeline">TIMELINE</a></li>
-                <li><a id="analytics">ANALYTICS</a></li>
-            </ul>
-        </nav>
+            <nav>
+                <div class="heading">
+                    <div class="title">
+                        <img src="/assets/elephant_logo.png" alt="Elephant" width="50" height="50">
+                        <h1>SHRINK THE ELEPHANT</h1>
+                    </div>
+                    <p>shrink any task to a manageable size effortlessly</p>
+                </div>
+                <ul class="nav-sects">
+                    <li><a href="/home/homePage/home.html">HOME</a></li>
+                </ul>
+            </nav>
     </header>
 
     <main>
@@ -32,17 +33,17 @@
 
         <form id="elephantForm">
             <div id="input">
-                <input type="text" id="elephantInput" placeholder="Type your elephant ...">
+                <input type="text" id="elephantInput" placeholder="Enter any task you want to shrink... or hit 'Break it down!' to see an example!">
             </div>
             <div class="granular-group">
-                <div id="question">How detailed do you want your breakdown to be?</div>
+                <div id="question">Do you want to fewer or more steps to complete your task?</div>
                 <div class="granular">
-                    <div>Less granular</div>
+                    <div>Fewer steps</div>
                     <div class="range-container">
                         <input type="range" id="granularity" min="1" max="5" value="3">
                         <div class="value" id="rangeValue">3</div>
                     </div>
-                    <div>More granular</div>
+                    <div>More steps</div>
                 </div>
             </div>
         </form>
